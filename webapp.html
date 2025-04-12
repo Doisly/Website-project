@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Surf Tip Generator</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    button { padding: 10px 20px; font-size: 16px; }
+    #tip { margin-top: 20px; font-size: 18px; color: #007BFF; }
+  </style>
+</head>
+<body>
+  <h1>Surf Tip Generator</h1>
+  <button onclick="generateTip()">Get a Surf Tip</button>
+  <p id="tip"></p>
+  <script>
+    const tips = [
+      "Stay low and centered on your board.",
+      "Keep your eyes on the wave, not your feet.",
+      "Practice your pop-up on land first.",
+      "Always respect the locals and the ocean.",
+      "Use a leash – it's your safety line."
+    ];
+    function generateTip() {
+      const rand = Math.floor(Math.random() * tips.length);
+      document.getElementById('tip').innerText = tips[rand];
+    }
+  </script>
+</body>
+</html>
